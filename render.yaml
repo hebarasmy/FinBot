@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: finbot-fullstack
+    env: python
+    buildCommand: |
+      pip install -r backend/requirements.txt
+      cd frontend && npm install
+    startCommand: ./start.sh
+    envVars:
+      - fromDotEnv: true
+    plan: free
