@@ -1,0 +1,14 @@
+{
+  "model": "llama",
+  "query_id": "factual-1",
+  "category": "factual",
+  "region": "US",
+  "query": "What was the S&P 500 return in 2023?",
+  "response": "Analysis of What was the S&P 500... for US: This financial topic relates to market dynamics and economic factors that influence investment decisions.",
+  "reference": "The S&P 500 returned approximately 24.2% in 2023, marking a strong year of recovery after the declines seen in 2022. This performance was driven largely by technology stocks and the enthusiasm around artificial intelligence developments.",
+  "response_time": 1.505051851272583,
+  "input_tokens": 9,
+  "output_tokens": 37,
+  "tokens_per_second": 24.58387062792221,
+  "keyword_coverage": 0.2
+}

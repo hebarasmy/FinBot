@@ -1,0 +1,8 @@
+pandas
+matplotlib
+seaborn
+numpy
+openai
+groq
+python-dotenv
+

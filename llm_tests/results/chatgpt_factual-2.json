@@ -1,0 +1,14 @@
+{
+  "model": "chatgpt",
+  "query_id": "factual-2",
+  "category": "factual",
+  "region": "Europe",
+  "query": "What is the current inflation rate in the European Union?",
+  "response": "This is a comprehensive analysis about What is the current inflation ... for the Europe region. The analysis includes relevant financial data and insights based on current market trends.",
+  "reference": "As of early 2024, the inflation rate in the European Union was around 2.8%, showing a significant decrease from the higher levels seen in 2022-2023. The European Central Bank has been working to bring inflation back to its 2% target.",
+  "response_time": 1.2043650150299072,
+  "input_tokens": 14,
+  "output_tokens": 46,
+  "tokens_per_second": 38.19440072232396,
+  "keyword_coverage": 0.3333333333333333
+}

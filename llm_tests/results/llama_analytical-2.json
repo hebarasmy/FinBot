@@ -1,0 +1,14 @@
+{
+  "model": "llama",
+  "query_id": "analytical-2",
+  "category": "analytical",
+  "region": "Global",
+  "query": "What is the relationship between oil prices and inflation?",
+  "response": "Analysis of What is the relation... for Global: This financial topic relates to market dynamics and economic factors that influence investment decisions.",
+  "reference": "Oil prices and inflation typically have a strong positive correlation. When oil prices rise, the cost of energy inputs increases across the economy, affecting transportation, manufacturing, and utility costs. These higher costs are often passed on to consumers, leading to broader price increases. Oil is also a component in many products, from plastics to chemicals, so price increases can ripple through supply chains. However, the relationship can vary based on factors like the oil-intensity of an economy, monetary policy responses, and whether price changes are driven by supply or demand factors.",
+  "response_time": 1.5050528049468994,
+  "input_tokens": 14,
+  "output_tokens": 38,
+  "tokens_per_second": 25.248283565267133,
+  "keyword_coverage": 0.0
+}

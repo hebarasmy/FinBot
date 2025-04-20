@@ -1,0 +1,14 @@
+{
+  "model": "llama",
+  "query_id": "analytical-1",
+  "category": "analytical",
+  "region": "Global",
+  "query": "How might rising interest rates affect tech stocks?",
+  "response": "Analysis of How might rising int... for Global: This financial topic relates to market dynamics and economic factors that influence investment decisions.",
+  "reference": "Rising interest rates typically have a negative impact on tech stocks for several reasons. Higher rates increase the cost of borrowing, which can reduce profit margins for tech companies that rely on debt financing for growth. More importantly, rising rates affect the discount rate used in valuation models, which reduces the present value of future cash flows. Since tech companies often have earnings weighted toward the future, they can be particularly sensitive to these valuation adjustments. Additionally, higher rates can lead to reduced consumer spending on technology products and services.",
+  "response_time": 1.5024440288543701,
+  "input_tokens": 12,
+  "output_tokens": 38,
+  "tokens_per_second": 25.29212354684215,
+  "keyword_coverage": 0.0
+}

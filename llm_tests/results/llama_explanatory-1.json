@@ -1,0 +1,14 @@
+{
+  "model": "llama",
+  "query_id": "explanatory-1",
+  "category": "explanatory",
+  "region": "Global",
+  "query": "Explain how inflation impacts bond yields.",
+  "response": "Analysis of Explain how inflatio... for Global: This financial topic relates to market dynamics and economic factors that influence investment decisions.",
+  "reference": "Inflation impacts bond yields through several mechanisms. First, higher inflation erodes the purchasing power of future interest payments and principal repayments, making existing bonds less attractive and causing their prices to fall and yields to rise. Second, central banks typically respond to higher inflation by raising policy rates, which pushes up yields across the bond market. Third, investors demand an 'inflation premium' on longer-term bonds when they expect higher future inflation, further increasing yields. The relationship between inflation and real yields (nominal yields minus inflation) is particularly important for investors, as positive real yields are necessary to preserve purchasing power over time.",
+  "response_time": 1.502094030380249,
+  "input_tokens": 10,
+  "output_tokens": 38,
+  "tokens_per_second": 25.298016789521796,
+  "keyword_coverage": 0.0
+}

@@ -1,0 +1,14 @@
+{
+  "model": "chatgpt",
+  "query_id": "regional-1",
+  "category": "regional",
+  "region": "Asia",
+  "query": "How do Asian stock markets differ from Western markets?",
+  "response": "This is a comprehensive analysis about How do Asian stock markets dif... for the Asia region. The analysis includes relevant financial data and insights based on current market trends.",
+  "reference": "Asian stock markets differ from Western markets in several key aspects. They typically have higher retail investor participation compared to the institutional dominance in Western markets, which can lead to greater volatility. Many Asian markets have stronger government influence and intervention. Market maturity varies significantly across Asia, with Japan being highly developed while frontier markets like Vietnam are still evolving. Corporate governance standards and transparency requirements often differ, though they're increasingly converging with global standards. Trading hours and holiday schedules reflect regional cultural differences. Additionally, sector composition varies, with many Asian indices having higher weightings in manufacturing, technology hardware, and emerging industries compared to Western indices' greater representation of services, healthcare, and established technology.",
+  "response_time": 1.2017719745635986,
+  "input_tokens": 13,
+  "output_tokens": 46,
+  "tokens_per_second": 38.27681205222318,
+  "keyword_coverage": 0.0
+}

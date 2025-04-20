@@ -1,0 +1,28 @@
+{
+  "model": "llama",
+  "query_id": "predictive-1",
+  "category": "predictive",
+  "region": "Global",
+  "query": "Which sectors are likely to outperform in a recession?",
+  "response": "Based on historical trends and industry analysis, the following sectors are likely to outperform in a recession:\n\n1. **Utilities**: As essential services like electricity and water, utility companies tend to maintain stable demand and provide a relatively consistent stream of revenue. Companies like Exelon (EXC) and Duke Energy (DUK) are examples of well-established utilities.\n\n2. **Consumer Staples**: Consumer staples companies offer essential products and services that consumers need regardless of economic conditions. These include:\n\t* Food manufacturers (e.g., Procter & Gamble (PG), PepsiCo (PEP))\n\t* Household product companies (e.g., Unilever (UL), Colgate-Palmolive (CL))\n\t* Beverage companies (e.g., Coca-Cola (KO), Anheuser-Busch InBev (BUD))\n\n3. **Healthcare**: As healthcare remains essential regardless of economic cycles, healthcare companies tend to perform well in recessions. These include:\n\t* Pharmaceutical companies (e.g., Johnson & Johnson (JNJ), Pfizer (PFE))\n\t* Healthcare service providers (e.g., CVS Health (CVS), UnitedHealth Group (UNH))\n\t* Medical device manufacturers (e.g., Medtronic (MDT), Stryker (SYK))\n\n4. **Telcos (Telecommunication Services)**: Certain subsectors within the telecommunications sector, such as:\n\t* Wireless carriers (e.g., Verizon (VZ), AT&T (T))\n\t* Internet and cable TV providers (e.g., Comcast (CMCSA), Charter Communications (CHTR))\n\n5. **Discount Retailers**: As consumers become more price-conscious during recessions, discount retailers tend to perform well. Examples of discount retailers include:\n\t* Walmart (WMT)\n\t* Target (TGT)\n\t* Dollar stores (e.g., Dollar General (DG), Family Dollar (FD))\n\nPlease note that each recession has unique characteristics, and performance can vary based on the specific causes and severity of the economic downturn. Additionally, individual company performance may not always correlate with sector performance.",
+  "reference": "During recessions, defensive sectors typically outperform the broader market. These include utilities, consumer staples, and healthcare, as they provide essential products and services that consumers need regardless of economic conditions. Utilities offer necessary services like electricity and water, consumer staples companies provide everyday items like food and household products, and healthcare remains essential regardless of economic cycles. Additionally, certain subsectors of telecommunications and discount retailers may perform well as consumers become more price-conscious. However, each recession has unique characteristics, and performance can vary based on the specific causes and severity of the economic downturn.",
+  "response_time": 1.6142783164978027,
+  "input_tokens": 13,
+  "output_tokens": 477,
+  "tokens_per_second": 295.4880797970808,
+  "keyword_coverage": 0.8333333333333334,
+  "similarity_score": 0.7638888888888888,
+  "hallucination_score": 0.5,
+  "unsupported_claims": [
+    "Names of specific companies in defensive sectors (e.g., Exelon, Duke Energy, Procter & Gamble, PepsiCo)",
+    "Examples of discount retailers including Walmart, Target, Dollar General, and Family Dollar"
+  ],
+  "hallucination_explanation": "While the AI response accurately discusses the defensive sectors expected to perform well during recessions, it introduces specific company names that are not included in the reference context. This inclusion of specific examples, while potentially helpful, constitutes unsupported claims since the reference does not specify particular companies. Therefore, the response combines truths with unsupported claims, justifying a score of 0.5.",
+  "political_bias": 0,
+  "regional_bias": 0.2,
+  "recency_bias": 0.2,
+  "source_bias": 0,
+  "confirmation_bias": 0.3,
+  "overall_bias": 0.2,
+  "bias_explanation": "The response does not exhibit strong political bias, as the analysis of sectors likely to perform well in a recession is based on industry trends rather than political viewpoints. There is slight regional bias since the examples provided are primarily from the U.S., which may not capture global opportunities. Recency bias is minimal; while the examples may reflect recent trends, they are grounded in historical data. There is no source bias, as the information is derived from a range of established sectors without heavy reliance on specific sources. Confirmation bias is present to some extent, as the response reinforces the idea that these sectors are inherently stable during recessions, which may be an overgeneralization."
+}

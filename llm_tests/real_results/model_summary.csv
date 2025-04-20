@@ -1,0 +1,4 @@
+model,response_time,keyword_coverage,similarity_score,input_tokens,output_tokens,tokens_per_second,keyword_coverage_rank,similarity_score_rank,tokens_per_second_rank,response_time_rank,average_rank
+chatgpt,8.10634446144104,1.0,0.5872926093514328,11.0,573.0,71.20053683380559,1.0,1.0,3.0,3.0,2.0
+deepseek,2.2495075464248657,0.9166666666666667,0.5818250377073907,11.0,632.0,280.9583812369062,2.0,2.0,2.0,2.0,2.0
+llama,1.4765995740890503,0.8333333333333334,0.48812217194570134,11.0,671.5,481.20879898380747,3.0,3.0,1.0,1.0,2.0

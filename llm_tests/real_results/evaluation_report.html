@@ -1,0 +1,317 @@
+
+    <html>
+    <head>
+        <title>LLM Evaluation Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 20px; }
+            h1, h2, h3 { color: #333; }
+            table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+            th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+            th { background-color: #f2f2f2; }
+            tr:nth-child(even) { background-color: #f9f9f9; }
+            .highlight { background-color: #e6f7ff; }
+            .section { margin-bottom: 30px; }
+            img { max-width: 100%; height: auto; margin: 10px 0; }
+            .model-response { background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0; }
+            .model-card { border: 1px solid #ddd; border-radius: 8px; padding: 15px; margin-bottom: 20px; }
+            .model-header { display: flex; justify-content: space-between; }
+            .metrics { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+            .metric { background-color: #e9ecef; padding: 5px 10px; border-radius: 4px; }
+        </style>
+    </head>
+    <body>
+        <h1>LLM Evaluation Report</h1>
+        <p>Generated on 2025-04-15 18:25:42</p>
+        
+        <div class="section">
+            <h2>Model Performance Summary</h2>
+            <table>
+                <tr>
+                    <th>Model</th>
+                    <th>Avg Rank</th>
+                    <th>Keyword Coverage</th>
+                    <th>Similarity Score</th>
+                    <th>Response Time (s)</th>
+                    <th>Tokens/Second</th>
+                </tr>
+    
+                <tr>
+                    <td>chatgpt</td>
+                    <td>2.00</td>
+                    <td>1.0000</td>
+                    <td>0.5873</td>
+                    <td>8.11</td>
+                    <td>71.20</td>
+                </tr>
+        
+                <tr>
+                    <td>deepseek</td>
+                    <td>2.00</td>
+                    <td>0.9167</td>
+                    <td>0.5818</td>
+                    <td>2.25</td>
+                    <td>280.96</td>
+                </tr>
+        
+                <tr>
+                    <td>llama</td>
+                    <td>2.00</td>
+                    <td>0.8333</td>
+                    <td>0.4881</td>
+                    <td>1.48</td>
+                    <td>481.21</td>
+                </tr>
+        
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Visualizations</h2>
+            
+            <h3>Response Time</h3>
+            <img src="response_time_comparison.png" alt="Response Time Comparison">
+            
+            <h3>Keyword Coverage</h3>
+            <img src="keyword_coverage_comparison.png" alt="Keyword Coverage Comparison">
+            
+            <h3>Similarity to Reference</h3>
+            <img src="similarity_comparison.png" alt="Similarity Score Comparison">
+            
+            <h3>Efficiency</h3>
+            <img src="token_efficiency_comparison.png" alt="Token Efficiency Comparison">
+            
+            <h3>Performance by Category</h3>
+            <img src="performance_by_category.png" alt="Performance by Category">
+            
+            <h3>Response Time by Region</h3>
+            <img src="response_time_by_region.png" alt="Response Time by Region">
+        </div>
+        
+        <div class="section">
+            <h2>Sample Responses</h2>
+    
+            <div class="model-card">
+                <div class="model-header">
+                    <h3>chatgpt</h3>
+                    <span>Query ID: analytical-1</span>
+                </div>
+                <p><strong>Query:</strong> How might rising interest rates affect tech stocks?</p>
+                <div class="model-response">
+                    <p>Rising interest rates can have several significant effects on tech stocks, which may be particularly sensitive to changes in the economic environment. Here are some key considerations:
+
+1. **Cost of Capital**:
+   - Rising interest rates increase the cost of borrowing. Many tech companies, especially startups, rely heavily on debt to finance their growth initiatives. Higher interest rates can lead to increased expenses for servicing debt, which can hurt profitability.
+
+2. **Valuation Metrics**:
+   - Tech stocks are often valued based on their potential for future growth, with methods such as discounted cash flow (DCF) analysis. Higher interest rates increase the discount rate used in these calculations, leading to lower present values for future cash flows. This can result in decreased valuations for tech companies, particularly those not yet profitable.
+
+3. **Investor Sentiment**:
+   - In an environment of rising interest rates, investors may shift their focus from growth stocks, like many tech companies, to value stocks or bonds that provide more predictable returns. This can lead to a decrease in demand for tech stocks, potentially driving prices down.
+
+4. **Consumer Spending**:
+   - Rising interest rates can dampen consumer spending, as higher rates often lead to more expensive loans and mortgages. Since many tech companies depend on consumer purchases (e.g., hardware, software, subscriptions), a slowdown in consumer spending can negatively impact their revenues.
+
+5. **Market Correction**:
+   - Tech stocks, which have experienced substantial growth in recent years, may undergo a correction in response to economic conditions. Rising rates can exacerbate this correction, particularly if investors begin to reassess the sustainability of high valuations in the tech sector.
+
+6. **Sector Rotation**:
+   - As interest rates rise, investors may rotate their portfolios out of high-growth sectors like technology and into sectors that perform better in a higher rate environment, such as financials or consumer staples.
+
+In summary, rising interest rates can lead to increased borrowing costs, reduced valuations, and a shift in investor sentiment, all of which can negatively impact tech stocks. However, the degree of impact can vary widely depending on the specific circumstances of each company, the overall economic context, and investor behavior.</p>
+                </div>
+                <div class="metrics">
+                    <span class="metric">Response Time: 8.96s</span>
+                    <span class="metric">Keyword Coverage: 1.00</span>
+                    <span class="metric">Similarity: 0.66</span>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <div class="model-header">
+                    <h3>chatgpt</h3>
+                    <span>Query ID: explanatory-1</span>
+                </div>
+                <p><strong>Query:</strong> Explain how inflation impacts bond yields.</p>
+                <div class="model-response">
+                    <p>Inflation has a significant impact on bond yields, primarily through its influence on interest rates and investor expectations. Here's how it works:
+
+1. **Real vs. Nominal Yields**: Bond yields can be thought of in nominal terms (the stated interest rate) and real terms (adjusted for inflation). When inflation rises, the purchasing power of the fixed interest payments from bonds decreases. Therefore, investors will demand higher nominal yields to compensate for this loss in purchasing power.
+
+2. **Interest Rates**: Central banks, like the Federal Reserve in the U.S. or the European Central Bank in the Eurozone, often respond to rising inflation by increasing benchmark interest rates. Higher interest rates generally lead to higher bond yields. When a central bank raises rates, the bonds that are newly issued come with higher interest rates compared to existing bonds, resulting in a decrease in the price of existing bonds, which inversely affects their yields.
+
+3. **Investor Behavior**: If inflation expectations rise, investors may sell their existing bonds, anticipating that the new bonds will offer better yields. This selling pressure on existing bonds drives their prices down and yields up. Conversely, if inflation is expected to decrease, bond prices may rise, leading to lower yields.
+
+4. **Type of Bonds**: Different types of bonds may react differently to inflation. For instance, Treasury Inflation-Protected Securities (TIPS) are designed to help investors hedge against inflation since their principal value rises with inflation, thus providing a fixed real yield regardless of inflation fluctuations.
+
+5. **Market Dynamics**: The overall demand for bonds also affects yields. If investors expect inflation to rise, there might be a shift toward assets that can offer better returns than bonds, leading to diminished demand for bonds and, consequently, higher yields.
+
+In summary, inflation impacts bond yields predominantly by influencing the central banks' monetary policy, altering investor expectations and behavior, and affecting the relationship between nominal and real yields. As inflation rises, bond yields typically increase to maintain their attractiveness to investors.</p>
+                </div>
+                <div class="metrics">
+                    <span class="metric">Response Time: 7.25s</span>
+                    <span class="metric">Keyword Coverage: 1.00</span>
+                    <span class="metric">Similarity: 0.51</span>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <div class="model-header">
+                    <h3>llama</h3>
+                    <span>Query ID: analytical-1</span>
+                </div>
+                <p><strong>Query:</strong> How might rising interest rates affect tech stocks?</p>
+                <div class="model-response">
+                    <p>Rising interest rates can have a significant impact on the tech sector. Here's a breakdown of the potential effects:
+
+**Short-term effects:**
+
+1. **Valuations:** Higher interest rates lead to higher borrowing costs, which can decrease the value of companies that rely heavily on debt financing. This can put downward pressure on tech stocks as investors may reconsider their valuations.
+2. **Growth stocks:** Tech stocks with high growth rates and lower profit margins might be more susceptible to rising interest rates, as investors tend to favor companies with more stable cash flows and dividend yields.
+3. **Currency effects:** A stronger US dollar can make exports from tech companies priced in US dollars more expensive, leading to lower sales and revenue.
+
+**Long-term effects:**
+
+1. **Capital expenditure:** Higher interest rates can make it more expensive for tech companies to invest in new projects and capital expenditures, which might slow down innovation and growth.
+2. **Debt financing:** Higher interest rates can lead to higher costs for companies that rely on debt financing, making it more challenging for them to invest in research and development, and grow their businesses.
+3. **Economic growth:** Rising interest rates can lead to slower economic growth, which can negatively impact the demand for tech products and services, particularly those with discretionary or non-essential needs.
+4. **Alternative investments:** With higher interest rates, investors might prefer to allocate their funds to more traditional, dividend-paying assets, such as utilities, real estate, or other sectors that are less correlated with the tech sector.
+
+**Industry-specific considerations:**
+
+1. **Semiconductor industry:** Rising interest rates might not have as significant an impact on the semiconductor industry, as it is driven by technology adoption and demand for electronic devices, rather than by economic cycles.
+2. **Cloud computing and cybersecurity:** These sectors might be more resilient to rising interest rates, as they tend to benefit from increased demand for digital infrastructure and security solutions.
+3. **Infrastructure and logistics:** Companies in these sectors might benefit from the increased focus on digital infrastructure and logistics, potentially providing a hedge against rising interest rates.
+
+**Action plan:**
+
+1. **Diversification:** Tech investors should maintain a diversified portfolio to minimize exposure to individual stocks and sectors.
+2. **Value investing:** Consider investing in tech companies with strong balance sheets, stable cash flows, and lower debt levels.
+3. **Emerging trends:** Focus on emerging trends, such as cloud computing, artificial intelligence, and cybersecurity, which</p>
+                </div>
+                <div class="metrics">
+                    <span class="metric">Response Time: 1.84s</span>
+                    <span class="metric">Keyword Coverage: 0.83</span>
+                    <span class="metric">Similarity: 0.51</span>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <div class="model-header">
+                    <h3>llama</h3>
+                    <span>Query ID: explanatory-1</span>
+                </div>
+                <p><strong>Query:</strong> Explain how inflation impacts bond yields.</p>
+                <div class="model-response">
+                    <p>Inflation has a significant impact on bond yields. When inflation is high, the purchasing power of the money you receive as bond returns decreases over time. To account for this, bond yields tend to rise in response to inflation expectations. Here's how:
+
+1. **Inflation Expectations:** When inflation is expected to rise, investors demand higher yields to compensate for the anticipated decline in purchasing power. This demand increases the supply and demand gap, causing bond yields to rise.
+2. **Real Returns:** Inflation-adjusted bond yields, also known as real returns, reflect the actual return on investment after accounting for inflation. A higher bond yield can compensate for expected inflation, ensuring that the real return remains stable or attractive to investors.
+3. **Bond Pricing:** When inflation expectations rise, investors become less interested in bonds with lower yields. This reduces demand for such bonds, causing their prices to drop, and their yields to rise. Conversely, higher-yielding bonds become more attractive, leading to increased demand and higher prices.
+4. **Central Bank Response:** Central banks, like the Federal Reserve in the United States, may raise interest rates to combat inflation. Rising interest rates make borrowing more expensive, which helps reduce economic activity and curb inflation. As interest rates rise, bond yields tend to follow, making new bonds issued at the higher interest rates relatively more attractive to investors.
+5. **Duration and Quality:** Longer-duration bonds are more sensitive to changes in interest rates and inflation expectations. When inflation is high, investors demand higher yields on longer-duration bonds to compensate for the anticipated decline in purchasing power over a longer period. High-quality bonds with lower credit risk may offer lower yields, as investors are less concerned about default risk and focus more on returns relative to inflation.
+
+To illustrate, suppose you buy a 10-year bond with a 4% coupon rate when inflation is 2%. The relative buying power of your 4% coupon is maintained over the 10-year investment duration. Now, if inflation rises to 5%, investors demand a higher return, say 6%, to ensure they maintain their purchasing power over the next 10 years. As a result, bond yields rise, and bond prices decrease.
+
+In summary, rising inflation expectations lead to higher bond yields, as investors demand compensation for the anticipated decline in purchasing power. This makes bond yields an essential indicator of inflation expectations, and investors use them to gauge the medium-term outlook for the economy.</p>
+                </div>
+                <div class="metrics">
+                    <span class="metric">Response Time: 1.12s</span>
+                    <span class="metric">Keyword Coverage: 0.83</span>
+                    <span class="metric">Similarity: 0.46</span>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <div class="model-header">
+                    <h3>deepseek</h3>
+                    <span>Query ID: analytical-1</span>
+                </div>
+                <p><strong>Query:</strong> How might rising interest rates affect tech stocks?</p>
+                <div class="model-response">
+                    <p><think>
+Okay, so I need to figure out how rising interest rates might affect tech stocks. I'm not super familiar with all the financial jargon, but I know a bit about stocks and interest rates. Let me start by breaking this down.
+
+First, I remember that interest rates are set by central banks, like the Federal Reserve in the US. When they raise rates, it usually means borrowing becomes more expensive. So, how does that impact tech companies?
+
+Tech companies, especially startups or those in growth phases, often rely on borrowing money to invest in their businesses. If interest rates go up, taking out loans becomes more costly. That could mean these companies have higher expenses, which might affect their profitability. If their profits go down, investors might not be as keen to buy their stocks, which could lower the stock price.
+
+Also, I think about the valuation of tech stocks. Many tech companies are valued based on their future earnings potential. When interest rates rise, the discount rate used in valuing these future earnings increases. That means the present value of those future profits is lower, making the stock look overvalued compared to before. So, higher interest rates can lead to lower valuations for tech stocks.
+
+Another point is the broader economy. Higher interest rates can slow down economic growth because borrowing becomes more expensive for everyone, not just companies. If the economy slows, consumer spending might decrease, which could hurt tech companies that rely on selling products or services. For example, if people buy fewer gadgets or subscribe less to services, the tech company's revenue drops.
+
+I also recall that when interest rates rise, investors might shift their money to safer investments like bonds, which offer better returns when rates are up. So, money might flow out of the stock market, particularly out of growth stocks like tech, into fixed-income assets. This shift can cause tech stocks to decline as investors sell them off.
+
+But wait, not all tech companies are the same. Some established tech firms might have strong cash reserves and not rely as much on debt. These companies might be less affected by rising rates. In fact, they might even benefit if higher rates indicate a strong economy, leading to more demand for their products or services.
+
+Also, higher interest rates can strengthen the US dollar. For tech companies that operate globally, a stronger dollar can make their products more expensive in other countries, reducing foreign sales. Additionally, when they convert foreign earnings back to dollars, the stronger currency can reduce their profit margins</p>
+                </div>
+                <div class="metrics">
+                    <span class="metric">Response Time: 2.25s</span>
+                    <span class="metric">Keyword Coverage: 1.00</span>
+                    <span class="metric">Similarity: 0.68</span>
+                </div>
+            </div>
+            
+            <div class="model-card">
+                <div class="model-header">
+                    <h3>deepseek</h3>
+                    <span>Query ID: explanatory-1</span>
+                </div>
+                <p><strong>Query:</strong> Explain how inflation impacts bond yields.</p>
+                <div class="model-response">
+                    <p><think>
+Okay, so I need to explain how inflation impacts bond yields. Hmm, I'm a bit rusty on this, but I remember that inflation and bond yields are related, but I'm not exactly sure how. Let me think through this step by step.
+
+First, I know that when you buy a bond, you're essentially loaning money to a borrower, like a government or a corporation. In return, they pay you interest over time, and eventually return the principal. The interest rate, or the yield, is what you earn on that investment.
+
+Now, inflation is the rate at which prices for goods and services are rising. So, if inflation goes up, things cost more. But how does that affect the bond yields? I think it's because inflation erodes the purchasing power of the money you get back. So, if you have a bond that pays 5% interest, but inflation is 3%, your real return is only 2%. That makes sense.
+
+So, if inflation is expected to rise, people might demand higher yields when buying new bonds. Why? Because they want to make sure their returns aren't eaten away by inflation. It's like they need a higher nominal return to maintain the same purchasing power. So, when inflation goes up, bond yields go up too. That seems to make sense.
+
+But wait, what happens to existing bonds when inflation increases? If I already own a bond with a lower yield, say 4%, and inflation goes up, the value of that bond would go down, right? Because new bonds are being issued with higher yields, making my older bond less attractive. So, the price of existing bonds falls when inflation rises, which in turn increases their yields because the yield is the interest payment divided by the lower price.
+
+I also remember something about the Federal Reserve or central banks adjusting interest rates. When inflation is high, they might raise interest rates to control it. Higher interest rates make borrowing more expensive, which can slow down spending and investment, thus curbing inflation. So, when the Fed raises rates, new bonds issued will have higher yields, and existing bonds might lose value because their fixed yields are less competitive.
+
+There's also something about inflation expectations. If people think inflation will be higher in the future, they might buy bonds with longer maturities to lock in higher yields now. Or maybe they avoid long-term bonds because they expect inflation to rise, so they prefer shorter terms where they can adjust more</p>
+                </div>
+                <div class="metrics">
+                    <span class="metric">Response Time: 2.25s</span>
+                    <span class="metric">Keyword Coverage: 0.83</span>
+                    <span class="metric">Similarity: 0.49</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="section">
+            <h2>Conclusion</h2>
+            <p>Based on the evaluation metrics, the models can be ranked as follows:</p>
+            <ol>
+    
+                <li><strong>chatgpt</strong> (Average Rank: 2.00)</li>
+        
+                <li><strong>deepseek</strong> (Average Rank: 2.00)</li>
+        
+                <li><strong>llama</strong> (Average Rank: 2.00)</li>
+        
+            </ol>
+            <p>
+                This ranking considers multiple factors including keyword coverage, similarity to reference answers, response time, 
+                and token generation efficiency.
+            </p>
+            <p>
+                <strong>Key Findings:</strong>
+            </p>
+            <ul>
+                <li>Response times vary significantly between models, with some models consistently outperforming others.</li>
+                <li>Keyword coverage shows how well each model addresses the expected topics in its responses.</li>
+                <li>Different models may excel in different query categories or regions.</li>
+            </ul>
+            <p>
+                <strong>Recommendations:</strong> Based on these results, consider using different models for different types of queries
+                to optimize both performance and quality.
+            </p>
+        </div>
+    </body>
+    </html>
+    
