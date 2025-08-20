@@ -57,6 +57,7 @@ Fin-Bot orchestrates three specialized AI agents:
 
 ## 📊 System Diagram
 
+```mermaid
 flowchart LR
   U[User] --> Q[Query / Upload]
   Q --> EX[Extract Text]
@@ -91,8 +92,9 @@ flowchart LR
 
   CLEAN --> OUT[Final Answer + Structured Summary]
   OUT --> M
-  
+
 📂 Data Stores
+
 MongoDB Atlas
 
 Users, sessions, query/chat history
@@ -105,42 +107,55 @@ Vector embeddings + finance metadata
 
 SQLite
 
-Local lightweight staging DB for ingestion/testing
+Lightweight local staging DB for ingestion/testing
 
 🧠 AI Models
-LLaMA-3-70B-8192 – Long-context reasoning
 
-DeepSeek-R1 Distill LLaMA-70B – Fast, cost-efficient
+LLaMA-3-70B-8192 → Long-context reasoning
 
-GPT-4o mini – Low-latency, concise finance answers
+DeepSeek-R1 Distill LLaMA-70B → Fast, cost-efficient
+
+GPT-4o mini → Low-latency, concise finance answers
 
 📡 Real-Time Data
+
 Widgets: Stocks, Cryptocurrency, Market Overview
 
 NewsAPI: Trending finance news (latest 8h)
 
 📑 Document Upload & Summarization
-Upload PDF/DOCX/TXT up to 10MB
+
+Supports PDF, DOCX, TXT (up to 10MB)
 
 Extracted with pdfplumber / python-docx
 
-Summarized with GPT-4o mini into: Executive, Key Metrics, Segments, Risks
+Summarized with GPT-4o mini into:
 
-Saved to MongoDB (history + file storage)
+Executive summary
+
+Key metrics
+
+Segments
+
+Risks
+
+Saved into MongoDB (history + file storage)
 
 🔐 Authentication & Security
+
 Email verification with SendGrid
 
-Password hashing with bcrypt
+Password hashing via bcrypt
 
 HTTP-only session cookies (7 days)
 
 Time-limited verification codes (15 min)
 
-Route middleware protections
+Middleware-protected routes
 
 ⚙️ Setup
 Prerequisites
+
 Python 3.10+
 
 Node.js
@@ -149,13 +164,14 @@ MongoDB Atlas account
 
 API keys: OpenAI, Groq, NewsAPI, SendGrid
 
+Installation
 # backend
 pip install -r requirements.txt
-
 
 # frontend
 cd web && npm install
 
+Run
 # run backend
 python app.py
 
@@ -163,9 +179,19 @@ python app.py
 cd web && npm run dev
 
 🧪 Testing
-Pytest unit tests for file parsing, MongoDB integration, embeddings, and response cleaning.
+
+Unit tests with pytest covering:
+
+File parsing
+
+MongoDB integration
+
+Embedding generation
+
+Response cleaning
 
 📌 Roadmap
+
  Extend personalization (multi-factor filters)
 
  Add multilingual summarization (Arabic, Chinese, French)
@@ -175,15 +201,18 @@ Pytest unit tests for file parsing, MongoDB integration, embeddings, and respons
  Deeper evaluation of agent orchestration
 
 📜 License
-MIT License. See LICENSE.
+
+MIT License. See LICENSE
+.
 
 🙌 Acknowledgements
-SentenceTransformers for embeddings
 
-ChromaDB for semantic retrieval
+SentenceTransformers → embeddings
 
-MongoDB Atlas + SQLite for storage
+ChromaDB → semantic retrieval
 
-OpenAI & Groq for LLM integration
+MongoDB Atlas + SQLite → storage solutions
 
-NewsAPI for real-time news
+OpenAI & Groq → LLM integration
+
+NewsAPI → real-time news feed
