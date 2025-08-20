@@ -57,40 +57,41 @@ Fin-Bot orchestrates three specialized AI agents:
 
 ## 📊 System Diagram
 
-```mermaid
 flowchart LR
-    U[User] --> Q[Query / Upload]
-    Q -->|PDF/DOCX/TXT| EX[Extract Text]
-    EX --> EM[Embed (SentenceTransformers)]
-    EM --> VDB[(ChromaDB: Vectors + Metadata)]
-    EM --> M[(MongoDB Atlas: Users, History, GridFS)]
-    EM --> LDB[(SQLite: Local Testing)]
+  U[User] --> Q[Query / Upload]
+  Q --> EX[Extract Text]
+  EX --> EM[Embed (SentenceTransformers)]
+  EM --> VDB[(ChromaDB: Vectors + Metadata)]
+  EM --> M[(MongoDB Atlas: Users, History, GridFS)]
+  EM --> LDB[(SQLite: Local Testing)]
 
-    U --> PREF[Region Prefs]
-    PREF --> VDB
+  U --> PREF[Region Prefs]
+  PREF --> VDB
 
-    Q --> RET[Retriever Agent]
-    VDB --> RET --> CTX[Relevant Context]
+  Q --> RET[Retriever Agent]
+  VDB --> RET
+  RET --> CTX[Relevant Context]
 
-    CTX --> SUMM[Summarizer Agent]
-    SUMM --> ANS[Contextual Answering Agent]
+  CTX --> SUMM[Summarizer Agent]
+  SUMM --> ANS[Contextual Answering Agent]
 
-    subgraph LLMs
-      OAI[GPT-4o mini]
-      L3[LLaMA-3 70B]
-      DS[DeepSeek-R1]
-    end
+  subgraph LLMs
+    OAI[GPT-4o mini]
+    L3[LLaMA-3 70B]
+    DS[DeepSeek-R1]
+  end
 
-    ANS --> OAI
-    ANS --> L3
-    ANS --> DS
+  ANS --> OAI
+  ANS --> L3
+  ANS --> DS
 
-    OAI --> CLEAN[Response Cleaning]
-    L3 --> CLEAN
-    DS --> CLEAN
+  OAI --> CLEAN[Response Cleaning]
+  L3 --> CLEAN
+  DS --> CLEAN
 
-    CLEAN --> OUT[Final Answer + Structured Summary]
-    OUT --> M
+  CLEAN --> OUT[Final Answer + Structured Summary]
+  OUT --> M
+  
 📂 Data Stores
 MongoDB Atlas
 
@@ -148,24 +149,19 @@ MongoDB Atlas account
 
 API keys: OpenAI, Groq, NewsAPI, SendGrid
 
-Install
-bash
-Copy
-Edit
 # backend
 pip install -r requirements.txt
 
-# frontend
-cd web && npm install
-⚡ Run
-bash
-Copy
-Edit
-# backend
-python app.py
 
 # frontend
+cd web && npm install
+
+# run backend
+python app.py
+
+# run frontend
 cd web && npm run dev
+
 🧪 Testing
 Pytest unit tests for file parsing, MongoDB integration, embeddings, and response cleaning.
 
