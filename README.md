@@ -1,5 +1,6 @@
 # Fin-Bot — RAG-Powered Financial Insight Platform
 
+Live Demo: https://finbot2025.vercel.app
 Fin-Bot is a full-stack web platform that delivers **personalized, context-aware financial insights** by combining **semantic search (SentenceTransformers + ChromaDB)** with **RAG-augmented LLMs**. The system supports real-time financial widgets, user document uploads (PDF/DOCX/TXT), and multi-model LLM selection (GPT-4o-mini, LLaMA-3-70B, DeepSeek-R1).
 
 ---
