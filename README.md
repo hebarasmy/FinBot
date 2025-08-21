@@ -73,11 +73,11 @@ Lightweight local staging DB for ingestion/testing
 
 🧠 AI Models
 
-LLaMA-3-70B-8192 → Long-context reasoning
+LLaMA-3-70B-8192 — Long-context reasoning
 
-DeepSeek-R1 Distill LLaMA-70B → Fast, cost-efficient
+DeepSeek-R1 Distill LLaMA-70B — Fast, cost-efficient
 
-GPT-4o mini → Low-latency, concise finance answers
+GPT-4o mini — Low-latency, concise finance answers
 
 📡 Real-Time Data
 
@@ -101,13 +101,13 @@ Segments
 
 Risks
 
-Saved into MongoDB (history + file storage)
+Saved to MongoDB (history + file storage)
 
 🔐 Authentication & Security
 
 Email verification with SendGrid
 
-Password hashing via bcrypt
+Password hashing with bcrypt
 
 HTTP-only session cookies (7 days)
 
@@ -126,12 +126,14 @@ MongoDB Atlas account
 
 API keys: OpenAI, Groq, NewsAPI, SendGrid
 
+Installation
 # backend
 pip install -r requirements.txt
 
 # frontend
 cd web && npm install
 
+Run
 # run backend
 python app.py
 
@@ -160,7 +162,10 @@ Response cleaning
 
  Deeper evaluation of agent orchestration
 
+📜 License
 
+MIT License. See LICENSE
+.
 
 🙌 Acknowledgements
 
