@@ -1,4 +1,4 @@
-# Fin-Bot — RAG-Powered Financial Insight Platform
+# Fin-Bot 
 
 Live Demo: https://finbot2025.vercel.app
 
