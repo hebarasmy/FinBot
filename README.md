@@ -55,43 +55,66 @@ Fin-Bot orchestrates three specialized AI agents:
 
 ---
 
+## 📊 System Diagram
+
+```mermaid
+flowchart LR
+  U[User] --> Q[Query / Upload]
+  Q --> EX[Extract Text]
+  EX --> EM[Embed (SentenceTransformers)]
+  EM --> VDB[(ChromaDB: Vectors + Metadata)]
+  EM --> M[(MongoDB Atlas: Users, History, GridFS)]
+  EM --> LDB[(SQLite: Local Testing)]
+
+  U --> PREF[Region Prefs]
+  PREF --> VDB
+
+  Q --> RET[Retriever Agent]
+  VDB --> RET
+  RET --> CTX[Relevant Context]
+
+  CTX --> SUMM[Summarizer Agent]
+  SUMM --> ANS[Contextual Answering Agent]
+
+  subgraph LLMs
+    OAI[GPT-4o mini]
+    L3[LLaMA-3 70B]
+    DS[DeepSeek-R1]
+  end
+
+  ANS --> OAI
+  ANS --> L3
+  ANS --> DS
+
+  OAI --> CLEAN[Response Cleaning]
+  L3 --> CLEAN
+  DS --> CLEAN
+
+  CLEAN --> OUT[Final Answer + Structured Summary]
+  OUT --> M
 📂 Data Stores
-
-MongoDB Atlas
-
-Users, sessions, query/chat history
-
-GridFS for file uploads
-
-ChromaDB
-
-Vector embeddings + finance metadata
-
-SQLite
-
-Lightweight local staging DB for ingestion/testing
+Store	Purpose / Contents
+MongoDB Atlas	Users, sessions, query/chat history; file storage via GridFS
+ChromaDB	Vector embeddings + finance metadata for semantic retrieval
+SQLite	Lightweight local staging/testing during ingestion & development
 
 🧠 AI Models
-
-LLaMA-3-70B-8192 — Long-context reasoning
-
-DeepSeek-R1 Distill LLaMA-70B — Fast, cost-efficient
-
-GPT-4o mini — Low-latency, concise finance answers
+Model	Strengths
+LLaMA-3-70B-8192	Long-context financial reasoning
+DeepSeek-R1 Distill LLaMA-70B	Fast, cost-efficient summaries & Q/A
+GPT-4o mini	Low-latency, concise finance answers
 
 📡 Real-Time Data
-
 Widgets: Stocks, Cryptocurrency, Market Overview
 
 NewsAPI: Trending finance news (latest 8h)
 
 📑 Document Upload & Summarization
+Supports PDF / DOCX / TXT (up to 10MB)
 
-Supports PDF, DOCX, TXT (up to 10MB)
+Text extraction via pdfplumber and python-docx
 
-Extracted with pdfplumber / python-docx
-
-Summarized with GPT-4o mini into:
+Summarized (GPT-4o mini) into:
 
 Executive summary
 
@@ -101,13 +124,12 @@ Segments
 
 Risks
 
-Saved to MongoDB (history + file storage)
+Summaries + files are persisted in MongoDB (history + GridFS)
 
 🔐 Authentication & Security
-
 Email verification with SendGrid
 
-Password hashing with bcrypt
+Password hashing via bcrypt
 
 HTTP-only session cookies (7 days)
 
@@ -115,33 +137,25 @@ Time-limited verification codes (15 min)
 
 Middleware-protected routes
 
-⚙️ Setup
-Prerequisites
+⚙️ Setup & Run
+bash
+Copy
+Edit
+# --- prerequisites (install yourself) ---
+# Python 3.10+, Node.js, MongoDB Atlas, API keys: OPENAI, GROQ, NEWSAPI, SENDGRID
 
-Python 3.10+
-
-Node.js
-
-MongoDB Atlas account
-
-API keys: OpenAI, Groq, NewsAPI, SendGrid
-
-Installation
-# backend
+# --- install backend ---
 pip install -r requirements.txt
 
-# frontend
-cd web && npm install
+# --- install frontend ---
+cd web && npm install && cd -
 
-Run
-# run backend
+# --- run backend ---
 python app.py
 
-# run frontend
+# --- run frontend ---
 cd web && npm run dev
-
 🧪 Testing
-
 Unit tests with pytest covering:
 
 File parsing
@@ -153,7 +167,6 @@ Embedding generation
 Response cleaning
 
 📌 Roadmap
-
  Extend personalization (multi-factor filters)
 
  Add multilingual summarization (Arabic, Chinese, French)
@@ -163,12 +176,9 @@ Response cleaning
  Deeper evaluation of agent orchestration
 
 📜 License
-
-MIT License. See LICENSE
-.
+MIT License. See LICENSE.
 
 🙌 Acknowledgements
-
 SentenceTransformers → embeddings
 
 ChromaDB → semantic retrieval
