@@ -54,44 +54,6 @@ Fin-Bot orchestrates three specialized AI agents:
 3. **Contextual Answering Agent** – Generates grounded conversational responses with RAG context.  
 
 ---
-
-## 📊 System Diagram
-
-```mermaid
-flowchart LR
-  U[User] --> Q[Query / Upload]
-  Q --> EX[Extract Text]
-  EX --> EM[Embed (SentenceTransformers)]
-  EM --> VDB[(ChromaDB: Vectors + Metadata)]
-  EM --> M[(MongoDB Atlas: Users, History, GridFS)]
-  EM --> LDB[(SQLite: Local Testing)]
-
-  U --> PREF[Region Prefs]
-  PREF --> VDB
-
-  Q --> RET[Retriever Agent]
-  VDB --> RET
-  RET --> CTX[Relevant Context]
-
-  CTX --> SUMM[Summarizer Agent]
-  SUMM --> ANS[Contextual Answering Agent]
-
-  subgraph LLMs
-    OAI[GPT-4o mini]
-    L3[LLaMA-3 70B]
-    DS[DeepSeek-R1]
-  end
-
-  ANS --> OAI
-  ANS --> L3
-  ANS --> DS
-
-  OAI --> CLEAN[Response Cleaning]
-  L3 --> CLEAN
-  DS --> CLEAN
-
-  CLEAN --> OUT[Final Answer + Structured Summary]
-  OUT --> M
 📂 Data Stores
 Store	Purpose / Contents
 MongoDB Atlas	Users, sessions, query/chat history; file storage via GridFS
