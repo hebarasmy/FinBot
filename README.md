@@ -54,99 +54,113 @@ Fin-Bot orchestrates three specialized AI agents:
 3. **Contextual Answering Agent** – Generates grounded conversational responses with RAG context.  
 
 ---
-📂 Data Stores
-Store	Purpose / Contents
-MongoDB Atlas	Users, sessions, query/chat history; file storage via GridFS
-ChromaDB	Vector embeddings + finance metadata for semantic retrieval
-SQLite	Lightweight local staging/testing during ingestion & development
+## 📂 Data Stores
 
-🧠 AI Models
-Model	Strengths
-LLaMA-3-70B-8192	Long-context financial reasoning
-DeepSeek-R1 Distill LLaMA-70B	Fast, cost-efficient summaries & Q/A
-GPT-4o mini	Low-latency, concise finance answers
+| Store | Purpose / Contents |
+|------|---------------------|
+| **MongoDB Atlas** | Users, sessions, query/chat history; file storage via **GridFS** |
+| **ChromaDB** | Vector embeddings + finance metadata for semantic retrieval |
+| **SQLite** | Lightweight local **staging/testing** during ingestion & development |
 
-📡 Real-Time Data
-Widgets: Stocks, Cryptocurrency, Market Overview
+---
 
-NewsAPI: Trending finance news (latest 8h)
+## 🧠 AI Models
 
-📑 Document Upload & Summarization
-Supports PDF / DOCX / TXT (up to 10MB)
+| Model | Strengths |
+|------|-----------|
+| **LLaMA-3-70B-8192** | Long-context financial reasoning |
+| **DeepSeek-R1 Distill LLaMA-70B** | Fast, cost-efficient summaries & Q/A |
+| **GPT-4o mini** | Low-latency, concise finance answers |
 
-Text extraction via pdfplumber and python-docx
+---
 
-Summarized (GPT-4o mini) into:
+## 📡 Real-Time Data
 
-Executive summary
+- Widgets: **Stocks**, **Cryptocurrency**, **Market Overview**
+- **NewsAPI**: Trending finance news (latest 8h)
 
-Key metrics
+---
 
-Segments
+## 📑 Document Upload & Summarization
 
-Risks
+- Supports **PDF / DOCX / TXT** (up to **10MB**)
+- Text extraction via `pdfplumber` and `python-docx`
+- Summarized (GPT-4o mini) into:
+  - Executive summary
+  - Key metrics
+  - Segments
+  - Risks
+- Summaries + files are persisted in **MongoDB (history + GridFS)**
 
-Summaries + files are persisted in MongoDB (history + GridFS)
+---
 
-🔐 Authentication & Security
-Email verification with SendGrid
+## 🔐 Authentication & Security
 
-Password hashing via bcrypt
+- Email verification with **SendGrid**
+- Password hashing via **bcrypt**
+- **HTTP-only** session cookies (7 days)
+- Time-limited verification codes (15 min)
+- Middleware-protected routes
 
-HTTP-only session cookies (7 days)
+---
 
-Time-limited verification codes (15 min)
+## ⚙️ Setup & Run
 
-Middleware-protected routes
+### Prerequisites
+- Python 3.10+
+- Node.js
+- MongoDB Atlas account
+- API keys: **OPENAI**, **GROQ**, **NEWSAPI**, **SENDGRID**
 
-⚙️ Setup & Run
-bash
-Copy
-Edit
-# --- prerequisites (install yourself) ---
-# Python 3.10+, Node.js, MongoDB Atlas, API keys: OPENAI, GROQ, NEWSAPI, SENDGRID
-
-# --- install backend ---
+### Installation
+```bash
+# install backend
 pip install -r requirements.txt
 
-# --- install frontend ---
-cd web && npm install && cd -
+# install frontend
+cd web && npm install
+```
 
-# --- run backend ---
+### Run
+```bash
+# run backend
 python app.py
 
-# --- run frontend ---
+# run frontend
 cd web && npm run dev
-🧪 Testing
-Unit tests with pytest covering:
+```
 
-File parsing
+---
 
-MongoDB integration
+## 🧪 Testing
 
-Embedding generation
+- Unit tests with **pytest** covering:
+  - File parsing
+  - MongoDB integration
+  - Embedding generation
+  - Response cleaning
 
-Response cleaning
+---
 
-📌 Roadmap
- Extend personalization (multi-factor filters)
+## 📌 Roadmap
 
- Add multilingual summarization (Arabic, Chinese, French)
+- [ ] Extend personalization (multi-factor filters)
+- [ ] Add multilingual summarization (Arabic, Chinese, French)
+- [ ] Bloomberg/Reuters API integration
+- [ ] Deeper evaluation of agent orchestration
 
- Bloomberg/Reuters API integration
+---
 
- Deeper evaluation of agent orchestration
+## 📜 License
 
-📜 License
-MIT License. See LICENSE.
+MIT License. See **LICENSE**.
 
-🙌 Acknowledgements
-SentenceTransformers → embeddings
+---
 
-ChromaDB → semantic retrieval
+## 🙌 Acknowledgements
 
-MongoDB Atlas + SQLite → storage solutions
-
-OpenAI & Groq → LLM integration
-
-NewsAPI → real-time news feed
+- **SentenceTransformers** → embeddings
+- **ChromaDB** → semantic retrieval
+- **MongoDB Atlas + SQLite** → storage solutions
+- **OpenAI & Groq** → LLM integration
+- **NewsAPI** → real-time news feed
